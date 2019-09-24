@@ -2,6 +2,7 @@ package com.ated.o2o.service;
 
 import com.ated.o2o.entity.User;
 import com.ated.o2o.pojo.vo.UserUpdateVO;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ public interface UserService {
 
     User findByAge(Integer age);
 
-    List<User> findAllUserByPage(int page, int size);
+    Page<User> findAllUserByPage(int page, int size);
 
     User updateUser(UserUpdateVO vo);
 

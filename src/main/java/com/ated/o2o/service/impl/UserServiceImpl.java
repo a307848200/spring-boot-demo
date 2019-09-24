@@ -33,17 +33,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> findAllUserByPage(int page, int size) {
+    public Page<User> findAllUserByPage(int page, int size) {
         Pageable pageable = new PageRequest(page, size);
         Page<User> users =  userRepository.findAll(pageable);
-        return users.getContent();
+        return users;
     }
 
     @Transactional(rollbackOn = Exception.class)
     @Override
     public User updateUser(UserUpdateVO vo) {
         User user = User.builder()
-                .id(vo.id)
                 .userName(vo.userName)
                 .userAge(vo.userAge)
                 .build();

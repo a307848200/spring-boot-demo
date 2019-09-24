@@ -16,16 +16,30 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <o2o.version>0.0.1-SNAPSHOT</o2o.version>
     </properties>
 
     <dependencies>
+
+        <!-- o2o -->
+<!--        <dependency>-->
+<!--            <groupId>com.ruizhisoft.o2o</groupId>-->
+<!--            <artifactId>O2O-DMIAPI</artifactId>-->
+<!--            <version>${o2o.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.ruizhisoft.o2o</groupId>-->
+<!--            <artifactId>O2O-DMIIMPL</artifactId>-->
+<!--            <version>${o2o.version}</version>-->
+<!--        </dependency>-->
+
+        <!-- swagger -->
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>2.7.0</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
         <dependency>
             <groupId>io.springfox</groupId>
