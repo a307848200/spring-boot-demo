@@ -1,0 +1,24 @@
+server:
+    contextPath: /oms-other
+    session:
+        timeout: 30000
+    port: 8083
+
+
+spring:
+#    session:
+#        store-type: redis
+    datasource:
+        #        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:mysql://mysql:3306/hwdb?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false&allowMultiQueries=true
+        username: hongwei
+        password: 123456
+        driver-class-name: com.mysql.jdbc.Driver
+    #=====================jpa config================================
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+#    jackson:
+#        serialization:
+#            INDENT_OUTPUT: true
