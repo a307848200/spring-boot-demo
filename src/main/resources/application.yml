@@ -22,3 +22,7 @@ spring:
 #    jackson:
 #        serialization:
 #            INDENT_OUTPUT: true
+
+o2o:
+    api:
+        coreUrl: http://localhost:8070/oms-web/
