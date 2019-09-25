@@ -37,12 +37,6 @@ public class UserController {
         return ResponseEntityDTO.successful(user);
     }
 
-    @ApiOperation(value = "根据年龄获取用户信息", response = User.class)
-    @GetMapping("/get/age/{age}")
-    public ResponseEntity<String> findByAge(@ApiParam("年龄") @PathVariable(value = "age")Integer age){
-        return ResponseEntityDTO.successful(userService.findByAge(age));
-    }
-
     @ApiOperation(value = "获取用户分页信息", response = User.class)
     @GetMapping("/get/all/{page}/{size}")
     public ResponseEntity<String> getAllUserByPage(@ApiParam("页码") @PathVariable("page")int page,

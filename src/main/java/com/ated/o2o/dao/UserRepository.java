@@ -12,12 +12,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    /**
-     * spring data jpa 会自动注入实现（根据方法命名规范）
-     * @return
-     */
-    User findByUserAge(int age);
-
 
     @Modifying
     @Query("delete from User u where u.id = :id")

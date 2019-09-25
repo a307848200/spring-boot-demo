@@ -13,8 +13,6 @@ public interface UserService {
 
     User findById(Long id);
 
-    User findByAge(Integer age);
-
     Page<User> findAllUserByPage(int page, int size);
 
     User updateUser(UserUpdateVO vo);

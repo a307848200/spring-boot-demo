@@ -28,11 +28,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findByAge(Integer age) {
-        return userRepository.findByUserAge(age);
-    }
-
-    @Override
     public Page<User> findAllUserByPage(int page, int size) {
         Pageable pageable = new PageRequest(page, size);
         Page<User> users =  userRepository.findAll(pageable);
@@ -44,7 +39,7 @@ public class UserServiceImpl implements UserService {
     public User updateUser(UserUpdateVO vo) {
         User user = User.builder()
                 .userName(vo.userName)
-                .userAge(vo.userAge)
+                .password(vo.password)
                 .build();
         return userRepository.save(user);
     }

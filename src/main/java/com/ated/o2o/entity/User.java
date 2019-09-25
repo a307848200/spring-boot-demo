@@ -19,7 +19,7 @@ import java.util.Date;
 @Data
 @Builder
 @Entity
-@Table(name="user_demo")
+@Table(name="ot_user")
 @ApiModel(value = "user", description = "用户表")
 @EntityListeners(AuditingEntityListener.class)
 public class User implements Serializable{
@@ -42,12 +42,12 @@ public class User implements Serializable{
     @Column(name="update_time")
     public Date updateTime;
 
-    @Column(name="user_age")
-    @ApiModelProperty(name = "userAge", value = "年龄")
-    public Integer userAge;
-
     @Column(name="user_name")
-    @ApiModelProperty(name = "userName", value = "名称", required = true)
+    @ApiModelProperty(name = "userName", value = "用户名", required = true)
     public String userName;
+
+    @Column(name="password")
+    @ApiModelProperty(name = "password", value = "密码", required = true)
+    public String password;
 
 }
