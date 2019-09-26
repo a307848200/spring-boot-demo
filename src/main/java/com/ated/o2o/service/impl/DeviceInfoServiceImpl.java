@@ -1,19 +1,16 @@
 package com.ated.o2o.service.impl;
 
 import com.alibaba.fastjson.JSONArray;
-import com.ated.o2o.common.OmsProperties;
+import com.ated.o2o.common.properties.OmsProperties;
 import com.ated.o2o.pojo.bo.DeviceInfoBO;
 import com.ated.o2o.service.DeviceInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author zengwx
