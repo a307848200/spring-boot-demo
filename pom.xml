@@ -33,7 +33,18 @@
 <!--            <version>${o2o.version}</version>-->
 <!--        </dependency>-->
 
-        <!---->
+        <!-- security for jwt  -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-security</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>io.jsonwebtoken</groupId>-->
+<!--            <artifactId>jjwt</artifactId>-->
+<!--            <version>0.7.0</version>-->
+<!--        </dependency>-->
+
+        <!-- 读取配置文件所需的依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>

@@ -1,4 +1,4 @@
-package com.ated.o2o.common;
+package com.ated.o2o.common.properties;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
