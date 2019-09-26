@@ -10,10 +10,11 @@ spring:
 #        store-type: redis
     datasource:
         #        type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://mysql:3306/hwdb?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false&allowMultiQueries=true
-        username: hongwei
-        password: 123456
+        url: jdbc:mysql://localhost:3306/hwdb?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false&allowMultiQueries=true
+        username: root
+        password: root
         driver-class-name: com.mysql.jdbc.Driver
+
     #=====================jpa config================================
     jpa:
         hibernate:
@@ -25,4 +26,4 @@ spring:
 
 o2o:
     api:
-        coreUrl: http://localhost:8070/oms-web/
+        coreUrl: http://172.17.0.1:8070/oms-web/
