@@ -14,4 +14,6 @@ public interface UploadService {
     Page<Upload>findAllUploadByPage(int page,int size);
 
     void delete(Long id);
+
+    Upload findByDeviceId(Long deviceId);
 }

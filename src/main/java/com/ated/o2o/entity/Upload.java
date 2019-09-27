@@ -46,7 +46,7 @@ public class Upload implements Serializable {
     @ApiModelProperty(name="address",value = "地址")
     public String address;
 
-    @Column(name="status")
-    @ApiModelProperty(name="status",value = "状态")
-    public String status;
+    @Column(name="device_id")
+    @ApiModelProperty(name="deviceId",value = "设备ID")
+    public Long deviceId;
 }

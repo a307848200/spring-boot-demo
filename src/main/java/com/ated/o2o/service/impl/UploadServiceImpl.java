@@ -24,6 +24,8 @@ public class UploadServiceImpl implements UploadService {
     @Autowired
     private UploadRepository uploadRepository;
 
+
+
     @Transactional(rollbackOn = Exception.class)
     @Override
     public Upload saveOrUpdate(Upload model,MultipartFile[] file) throws IOException {
@@ -63,6 +65,11 @@ public class UploadServiceImpl implements UploadService {
     @Override
     public void delete(Long id) {
         uploadRepository.delete(id);
+    }
+
+    @Override
+    public Upload findByDeviceId(Long deviceId) {
+        return uploadRepository.findOne(deviceId);
     }
 
 }

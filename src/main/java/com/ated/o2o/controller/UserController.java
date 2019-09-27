@@ -13,6 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+
 /**
  * user 控制层
  * @author zengwx
@@ -54,6 +57,12 @@ public class UserController {
     @PostMapping("/delete/")
     public void getUserById(@RequestBody BaseIdVO vo){
         userService.deleteUser(vo.id);
+    }
+
+    @ApiOperation(value = "登录用户信息", response = User.class)
+    @PostMapping("/login/{userName}/{password}")
+    public ResponseEntity<String>  findByUserNameAndPassword(@PathVariable("userName")String userName, @PathVariable("password")String password) throws UnsupportedEncodingException, NoSuchAlgorithmException {
+        return ResponseEntityDTO.successful(userService.findByUserNameAndPassword(userName,password));
     }
 
 

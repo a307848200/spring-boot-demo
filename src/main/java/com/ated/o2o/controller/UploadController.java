@@ -45,4 +45,10 @@ public class UploadController {
         return ResponseEntityDTO.successful(uploadService.findAllUploadByPage(page,size));
     }
 
+    @ApiOperation(value = "根据设备ID获取信息", response = Upload.class)
+    @PostMapping("/get/deviceId/{deviceId}")
+    public ResponseEntity<String> findOneDeviceId(@PathVariable("deviceId")Long deviceId){
+        return ResponseEntityDTO.successful(uploadService.findByDeviceId(deviceId));
+    }
+
 }
