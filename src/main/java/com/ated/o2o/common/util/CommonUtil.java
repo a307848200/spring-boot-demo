@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by Administrator on 2017-09-30.
+ * 通用工具类
+ * @author zengwx
+ * @date 2017-09-30
  */
 public class CommonUtil {
 

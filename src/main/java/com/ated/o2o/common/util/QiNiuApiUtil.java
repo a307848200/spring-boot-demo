@@ -14,6 +14,7 @@ import org.springframework.util.Assert;
 import java.io.*;
 
 /**
+ * 七牛云储存api调用工具类
  * @author zengwx
  */
 @Slf4j
