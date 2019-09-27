@@ -24,5 +24,6 @@ spring:
 #            INDENT_OUTPUT: true
 
 o2o:
-    api:
+    url:
         coreUrl: http://172.17.0.1:8070/oms-web/
+        qiNiuResourcesUrl: http://o2o.pic.ated.biz/

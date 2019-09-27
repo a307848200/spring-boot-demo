@@ -11,6 +11,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,8 +31,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Page<User> findAllUserByPage(int page, int size) {
         Pageable pageable = new PageRequest(page, size);
-        Page<User> users =  userRepository.findAll(pageable);
-        return users;
+        return userRepository.findAll(pageable);
     }
 
     @Transactional(rollbackOn = Exception.class)
