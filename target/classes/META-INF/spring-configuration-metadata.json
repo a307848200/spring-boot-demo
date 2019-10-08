@@ -1,0 +1,24 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.ated.o2o.common.properties.OmsProperties",
+      "name": "o2o.url",
+      "type": "com.ated.o2o.common.properties.OmsProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.ated.o2o.common.properties.OmsProperties",
+      "name": "o2o.url.core-url",
+      "description": "o2o域名",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ated.o2o.common.properties.OmsProperties",
+      "name": "o2o.url.qi-niu-resources-url",
+      "description": "七牛资源域名",
+      "type": "java.lang.String"
+    }
+  ]
+}
