@@ -13,11 +13,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import javax.servlet.Filter;
 
 
-/** 开启EntityListeners 注解 */
+/* 开启EntityListeners 注解 */
 @EnableJpaAuditing
-/** 开启swagger */
+/* 开启swagger */
 @EnableSwagger2
-/** 开启实体类扫描 */
+/* 开启实体类扫描 */
 @EntityScan(basePackages={"com.ated.o2o.entity"})
 /**
  * @author zengwx

@@ -19,6 +19,11 @@ spring:
         hibernate:
             ddl-auto: update
         show-sql: true
+#        资源文件访问修改
+    resources:
+        static-locations: 'classpath:/web/'
+    mvc:
+        static-path-pattern: /**
 #    jackson:
 #        serialization:
 #            INDENT_OUTPUT: true
@@ -27,3 +32,7 @@ o2o:
     url:
         coreUrl: http://172.17.0.1:8070/oms-web/
         qiNiuResourcesUrl: http://o2o.pic.ated.biz/
+
+
+
+
