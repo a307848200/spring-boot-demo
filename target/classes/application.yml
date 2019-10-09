@@ -19,10 +19,11 @@ spring:
         hibernate:
             ddl-auto: update
         show-sql: true
-    resources:
-        static-locations: 'classpath:/web/'
-    mvc:
-        static-path-pattern: /**
+#        资源文件访问修改
+#    resources:
+#        static-locations: 'classpath:/web/'
+#    mvc:
+#        static-path-pattern: /**
 #    jackson:
 #        serialization:
 #            INDENT_OUTPUT: true

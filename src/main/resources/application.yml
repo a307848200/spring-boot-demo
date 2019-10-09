@@ -20,10 +20,10 @@ spring:
             ddl-auto: update
         show-sql: true
 #        资源文件访问修改
-    resources:
-        static-locations: 'classpath:/web/'
-    mvc:
-        static-path-pattern: /**
+#    resources:
+#        static-locations: 'classpath:/web/'
+#    mvc:
+#        static-path-pattern: /**
 #    jackson:
 #        serialization:
 #            INDENT_OUTPUT: true

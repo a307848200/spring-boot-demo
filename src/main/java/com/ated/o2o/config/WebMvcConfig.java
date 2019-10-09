@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.*;
  * @author zengwx
  */
 @Configuration
-public class WebMvcConfig extends WebMvcConfigurerAdapter {
+public class WebMvcConfig extends WebMvcConfigurationSupport {
 
 //    /**
 //     * 快速解决页面转向问题
@@ -20,22 +20,22 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 ////    	registry.addViewController("/error").setViewName("/index.html");
 //    }
 
-//    /**
-//     * 静态资源访问地址修改
-//     * @param registry ResourceHandlerRegistry
-//     */
-//    @Override
-//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    /**
+     * 静态资源访问地址修改
+     * @param registry ResourceHandlerRegistry
+     */
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/**")
+                .addResourceLocations("classpath:/web/");
 //        registry.addResourceHandler("/web/**")
-//                .addResourceLocations("classpath:/web/");
-////        registry.addResourceHandler("/static/**")
-////            .addResourceLocations("classpath:/static/");
-////        registry.addResourceHandler("swagger-ui.html")
-////            .addResourceLocations("classpath:/META-INF/resources/");
-//        registry.addResourceHandler("/webjars/**")
-//            .addResourceLocations("classpath:/META-INF/resources/webjars/");
-//        super.addResourceHandlers(registry);
-//    }
+//            .addResourceLocations("classpath:/web/static/js");
+//        registry.addResourceHandler("swagger-ui.html")
+//            .addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**")
+            .addResourceLocations("classpath:/META-INF/resources/webjars/");
+        super.addResourceHandlers(registry);
+    }
 
 //    @Bean
 //    public MappingJackson2HttpMessageConverter customJackson2HttpMessageConverter() {
