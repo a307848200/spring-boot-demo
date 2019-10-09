@@ -4,6 +4,11 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
 import org.apache.commons.codec.binary.Hex;
+
+
+/**
+ * MD5加密
+ */
 public class Md5SaltTool {
     /**
      *  普通MD5加密 01

@@ -1,5 +1,6 @@
 package com.ated.o2o.entity;
 
+import com.sun.xml.internal.bind.v2.model.core.ID;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;
@@ -42,8 +43,16 @@ public class User implements Serializable{
     @Column(name="update_time")
     public Date updateTime;
 
+    @Column(name="name")
+    @ApiModelProperty(name = "name", value = "用户名", required = true)
+    public String name;
+
+    @Column(name="device_id")
+    @ApiModelProperty(name = "deviceId", value = "设备ID", required = true)
+    public String deviceId;
+
     @Column(name="user_name")
-    @ApiModelProperty(name = "userName", value = "用户名", required = true)
+    @ApiModelProperty(name = "userName", value = "帐号", required = true)
     public String userName;
 
     @Column(name="password")

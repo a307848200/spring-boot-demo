@@ -15,6 +15,7 @@ import javax.transaction.Transactional;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -34,15 +35,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public Page<User> findAllUserByPage(int page, int size) {
         Pageable pageable = new PageRequest(page, size);
-        Page<User> users =  userRepository.findAll(pageable);
-        return users;
+        return userRepository.findAll(pageable);
     }
 
     @Transactional(rollbackOn = Exception.class)
     @Override
     public User updateUser(UserUpdateVO vo) {
         String encryptedPwd = Md5SaltTool.getStrMD5(vo.password);
-        System.out.println("密码："+encryptedPwd);
         User user = User.builder()
                 .userName(vo.userName)
                 .password(encryptedPwd)
@@ -53,9 +52,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByUserNameAndPassword(String userName, String password) throws UnsupportedEncodingException, NoSuchAlgorithmException {
         String encryptedPwd = Md5SaltTool.getStrMD5(password);
-        boolean saltverifyMD5 = Md5SaltTool.getSaltverifyMD5(password, encryptedPwd);
-        System.out.println("密码："+encryptedPwd);
-        System.out.println("密码："+saltverifyMD5);
         User user = userRepository.findByUserNameAndPassword(userName, encryptedPwd);
         System.out.println(user);
         return user;

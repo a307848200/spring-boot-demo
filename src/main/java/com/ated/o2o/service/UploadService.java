@@ -1,19 +1,18 @@
 package com.ated.o2o.service;
 
-import com.ated.o2o.entity.Upload;
+import com.ated.o2o.entity.DeviceInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface UploadService {
 
-    Upload saveOrUpdate(Upload model, MultipartFile[] file) throws IOException;
+    DeviceInfo saveOrUpdate(DeviceInfo model, MultipartFile[] file) throws IOException;
 
-    Page<Upload>findAllUploadByPage(int page,int size);
+    Page<DeviceInfo>findAllUploadByPage(int page, int size);
 
     void delete(Long id);
 
-    Upload findByDeviceId(Long deviceId);
+    DeviceInfo findByDeviceId(Long deviceId);
 }

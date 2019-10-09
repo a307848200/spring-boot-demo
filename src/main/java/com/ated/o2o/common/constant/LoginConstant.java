@@ -2,7 +2,7 @@ package com.ated.o2o.common.constant;
 
 
 /**
- * 其它的一些静态资源
+ * 登录模块静态资源
  * @author zengwx
  *
  */

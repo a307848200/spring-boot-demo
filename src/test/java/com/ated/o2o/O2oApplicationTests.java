@@ -1,6 +1,7 @@
 package com.ated.o2o;
 
 import com.ated.o2o.common.util.Md5SaltTool;
+import com.ated.o2o.common.util.QiNiuApiUtil;
 import com.ated.o2o.service.DeviceInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -23,6 +24,10 @@ public class O2oApplicationTests {
     @Test
     public void listDeviceInfoByCompId() {
         log.info("list:{}",deviceInfoService.listDeviceInfoByCompId(335307L));
+    }
+
+    @Test
+    private void upload(){
     }
 
 }
