@@ -1,15 +1,14 @@
 package com.ated.o2o.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.config.annotation.*;
 
 /**
  * SpringMVC 配置类
  * @author zengwx
  */
 @Configuration
-public class WebMvcConfig extends WebMvcConfigurationSupport {
+public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
 //    /**
 //     * 快速解决页面转向问题
@@ -21,24 +20,22 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
 ////    	registry.addViewController("/error").setViewName("/index.html");
 //    }
 
-    /**
-     * 静态资源访问地址修改
-     *
-     * @param registry ResourceHandlerRegistry
-     */
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**")
-            .addResourceLocations("classpath:/web/");
-//        registry.addResourceHandler("/static/**")
-//            .addResourceLocations("classpath:/static/");
-        registry.addResourceHandler("swagger-ui.html")
-            .addResourceLocations("classpath:/META-INF/resources/");
-
-        registry.addResourceHandler("/web/**")
-            .addResourceLocations("classpath:/META-INF/resources/webjars/");
-        super.addResourceHandlers(registry);
-    }
+//    /**
+//     * 静态资源访问地址修改
+//     * @param registry ResourceHandlerRegistry
+//     */
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("/web/**")
+//                .addResourceLocations("classpath:/web/");
+////        registry.addResourceHandler("/static/**")
+////            .addResourceLocations("classpath:/static/");
+////        registry.addResourceHandler("swagger-ui.html")
+////            .addResourceLocations("classpath:/META-INF/resources/");
+//        registry.addResourceHandler("/webjars/**")
+//            .addResourceLocations("classpath:/META-INF/resources/webjars/");
+//        super.addResourceHandlers(registry);
+//    }
 
 //    @Bean
 //    public MappingJackson2HttpMessageConverter customJackson2HttpMessageConverter() {
