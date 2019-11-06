@@ -10,7 +10,7 @@ spring:
 #        store-type: redis
     datasource:
         #        type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://localhost:3306/hwdb?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false&allowMultiQueries=true
+        url: jdbc:mysql://localhost:3306/oms-other?useUnicode=true&characterEncoding=utf8&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false&allowMultiQueries=true
         username: root
         password: root
         driver-class-name: com.mysql.jdbc.Driver
