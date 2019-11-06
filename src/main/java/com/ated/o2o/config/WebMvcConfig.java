@@ -20,22 +20,22 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 ////    	registry.addViewController("/error").setViewName("/index.html");
 //    }
 
-//    /**
-//     * 静态资源访问地址修改
-//     * @param registry ResourceHandlerRegistry
-//     */
-//    @Override
-//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//        registry.addResourceHandler("/web/**")
-//                .addResourceLocations("classpath:/web/");
-////        registry.addResourceHandler("/static/**")
-////            .addResourceLocations("classpath:/static/");
-////        registry.addResourceHandler("swagger-ui.html")
-////            .addResourceLocations("classpath:/META-INF/resources/");
-//        registry.addResourceHandler("/webjars/**")
-//            .addResourceLocations("classpath:/META-INF/resources/webjars/");
-//        super.addResourceHandlers(registry);
-//    }
+    /**
+     * 静态资源访问地址修改
+     * @param registry ResourceHandlerRegistry
+     */
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/**")
+                .addResourceLocations("classpath:/web/");
+//        registry.addResourceHandler("/static/**")
+//            .addResourceLocations("classpath:/static/");
+//        registry.addResourceHandler("swagger-ui.html")
+//            .addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**")
+            .addResourceLocations("classpath:/META-INF/resources/webjars/");
+        super.addResourceHandlers(registry);
+    }
 
 //    @Bean
 //    public MappingJackson2HttpMessageConverter customJackson2HttpMessageConverter() {

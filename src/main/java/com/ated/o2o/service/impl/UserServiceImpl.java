@@ -53,7 +53,6 @@ public class UserServiceImpl implements UserService {
     public User findByUserNameAndPassword(String userName, String password) throws UnsupportedEncodingException, NoSuchAlgorithmException {
         String encryptedPwd = Md5SaltTool.getStrMD5(password);
         User user = userRepository.findByUserNameAndPassword(userName, encryptedPwd);
-        System.out.println(user);
         return user;
     }
 
